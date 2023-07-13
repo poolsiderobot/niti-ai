@@ -66,8 +66,35 @@ body {
 .dot.large {
     width: 15px; 
     height: 15px; 
+    margin-top: -3px;
   }
 
 button{
     margin-left: 15px;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.slide-enter {
+  animation: slideFromRight 0.13s forwards;
+}
+
+.slide-exit {
+  animation: slideToLeft 0.13s forwards;
 }

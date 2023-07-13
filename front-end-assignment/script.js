@@ -82,24 +82,35 @@ function dotClick(event) {
 //Button event listeners
 
 prevBtn.addEventListener('click', () => {
-    if (currentIndex >2) {
-      currentIndex-=3;}
-    else currentIndex=data.length-3;
-      renderCarousel();
-   
-    }
-  )
-;
+  if (currentIndex > 0) {
+    currentIndex -= 3;
+  } else {
+    currentIndex = data.length - 3;
+  }
+  
+  carouselUl.classList.remove('slide-exit');
+  carouselUl.classList.add('slide-enter');
+  
+  setTimeout(() => {
+    renderCarousel();
+    carouselUl.classList.remove('slide-enter');
+  }, 200);
+});
 
 nextBtn.addEventListener('click', () => {
-    if (currentIndex < data.length - 3) {
-      currentIndex+=3;
-    } 
-      else currentIndex=0;
-      renderCarousel();   
-  })
+  if (currentIndex < data.length - 3) {
+    currentIndex += 3;
+  } else {
+    currentIndex = 0;
+  }
   
-;
-
+  carouselUl.classList.remove('slide-enter');
+  carouselUl.classList.add('slide-exit');
+  
+  setTimeout(() => {
+    renderCarousel();
+    carouselUl.classList.remove('slide-exit');
+  }, 200);
+});
 
 window.onload = renderCarousel();
