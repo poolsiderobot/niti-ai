@@ -50,7 +50,7 @@ let carouselHtml = '';
 // Add the images as list elements to the carousel-ul div
 
 for (let i = 0; i < slicedData.length; i++) {
-    carouselHtml += `<li><img width=90 height=90 src ='${slicedData[i]}'></li>`;
+    carouselHtml += `<li><img width=90 height=90 src ='images/${slicedData[i]}'></li>`;
   }
 
 carouselUl.innerHTML = carouselHtml;
