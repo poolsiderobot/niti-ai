@@ -1,0 +1,73 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+
+
+  .carousel-ul {
+    display: flex;
+    gap: 64px;
+    overflow: hidden;
+    list-style-type: none;
+    padding: 10;
+    margin: 0;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .carousel-ul li {
+    flex: 0 0 auto;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 18px;
+  background-color: rgb(219, 231, 90);
+      padding: 20px;
+    margin-right: 10px;
+}
+  
+
+.carousel-ul li img {                     /* FOR NETFLIX CAROUSEL*/
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-ul li:hover img {
+    transform: scale(1.2);
+  }
+  
+
+
+#navigation-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(55, 11, 11);
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.large {
+    width: 15px; 
+    height: 15px; 
+  }
+
+button{
+    margin-left: 15px;
+}
